@@ -77,7 +77,7 @@ if "q_index" not in st.session_state:
 if "answers" not in st.session_state:
     st.session_state.answers = {}
 
-# ---------------- QUESTIONS ----------------
+# ---------------- MCQ QUESTIONS (15) ----------------
 
 questions = [
 
@@ -143,6 +143,8 @@ questions = [
 
 ]
 
+# ---------------- FILL IN THE BLANK (20) ----------------
+
 fill_questions = [
 
 {"q":"K-means algorithm groups data into ______ clusters.","answer":"K"},
@@ -168,13 +170,13 @@ fill_questions = [
 
 ]
 
+# ---------------- TOTAL QUESTIONS ----------------
+
 all_questions = questions + fill_questions
 
-# ---------------- LOGIN PAGE ----------------
+# ---------------- LOGIN ----------------
 
 if st.session_state.page == "login":
-
-    st.markdown('<div class="card">', unsafe_allow_html=True)
 
     st.subheader("Student Login")
 
@@ -191,8 +193,6 @@ if st.session_state.page == "login":
         st.session_state.page = "quiz"
         st.rerun()
 
-    st.markdown('</div>', unsafe_allow_html=True)
-
 # ---------------- QUIZ PAGE ----------------
 
 elif st.session_state.page == "quiz":
@@ -207,18 +207,13 @@ elif st.session_state.page == "quiz":
     minutes = remaining // 60
     seconds = remaining % 60
 
-    st.markdown(
-    f'<p class="timer">⏱ Time Remaining: {minutes}:{seconds:02d}</p>',
-    unsafe_allow_html=True
-    )
+    st.markdown(f'<p class="timer">⏱ Time Remaining: {minutes}:{seconds:02d}</p>', unsafe_allow_html=True)
 
     quiz = st.session_state.quiz
     i = st.session_state.q_index
     q = quiz[i]
 
     st.progress((i+1)/len(quiz))
-
-    st.markdown('<div class="card">', unsafe_allow_html=True)
 
     st.subheader(f"Question {i+1} of {len(quiz)}")
     st.write(q["q"])
@@ -248,8 +243,6 @@ elif st.session_state.page == "quiz":
             st.session_state.page = "result"
             st.rerun()
 
-    st.markdown('</div>', unsafe_allow_html=True)
-
 # ---------------- RESULT PAGE ----------------
 
 elif st.session_state.page == "result":
@@ -267,12 +260,19 @@ elif st.session_state.page == "result":
         if correct == student:
             score +=1
 
-    st.success(f"🎯 Your Score: {score} / {len(quiz)}")
+    total = len(quiz)
+    percentage = round((score/total)*100,2)
+
+    st.success(f"🎯 Score: {score} / {total}")
+    st.info(f"📊 Percentage: {percentage}%")
+
+    # ---------------- SAVE RESULT ----------------
 
     result = {
         "Register":st.session_state.reg,
         "Score":score,
-        "Total":len(quiz),
+        "Total":total,
+        "Percentage":percentage,
         "Time":datetime.now()
     }
 
@@ -293,6 +293,27 @@ elif st.session_state.page == "result":
     leaderboard = df.sort_values("Score",ascending=False)
 
     st.dataframe(leaderboard)
+
+    # ---------------- REVIEW ANSWERS ----------------
+
+    if st.button("📘 Review Answers"):
+
+        for i,q in enumerate(quiz):
+
+            student = answers.get(i,"Not Answered")
+            correct = q["answer"]
+
+            st.markdown(f"**Question {i+1}:** {q['q']}")
+
+            st.write("Your Answer:",student)
+            st.write("Correct Answer:",correct)
+
+            if str(student).lower().strip() == str(correct).lower().strip():
+                st.success("Correct")
+            else:
+                st.error("Incorrect")
+
+            st.divider()
 
     # ---------------- CLEAR LEADERBOARD ----------------
 
