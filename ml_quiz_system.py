@@ -54,9 +54,16 @@ QUIZ_TIME = 600
 # ---------------- REGISTER NUMBERS ----------------
 
 register_numbers = [
-"23K81A7201","23K81A7202","23K81A7203","23K81A7204","23K81A7205",
-"23K81A7206","23K81A7207","23K81A7208","23K81A7210","23K81A7211",
-"23K81A7212","23K81A7213","23K81A7214","23K81A7215","23K81A7216"
+"23K81A7201","23K81A7202","23K81A7203","23K81A7204","23K81A7205","23K81A7206","23K81A7207",
+"23K81A7208","23K81A7210","23K81A7211","23K81A7212","23K81A7213","23K81A7214","23K81A7215",
+"23K81A7216","23K81A7218","23K81A7219","23K81A7220","23K81A7222","23K81A7223","23K81A7224",
+"23K81A7225","23K81A7226","23K81A7227","23K81A7228","23K81A7229","23K81A7230","23K81A7231",
+"23K81A7232","23K81A7233","23K81A7234","23K81A7235","23K81A7236","23K81A7237","23K81A7238",
+"23K81A7239","23K81A7240","23K81A7241","23K81A7242","23K81A7243","23K81A7244","23K81A7245",
+"23K81A7246","23K81A7247","23K81A7249","23K81A7250","23K81A7251","23K81A7252","23K81A7253",
+"23K81A7254","23K81A7255","23K81A7256","23K81A7257","23K81A7258","23K81A7259","23K81A7260",
+"23K81A7261","23K81A7262","23K81A7263","23K81A7264","24K85A7201","24K85A7202","24K85A7203",
+"24K85A7204","24K85A7205","24K85A7206"
 ]
 
 # ---------------- SESSION ----------------
@@ -90,9 +97,49 @@ questions = [
 "options":["Principal Component Analysis","Partial Component Analysis","Primary Cluster Analysis","Predictive Component Algorithm"],
 "answer":"Principal Component Analysis"},
 
+{"q":"LDA is mainly used for:",
+"options":["Regression","Classification","Clustering","Sampling"],
+"answer":"Classification"},
+
+{"q":"Factor Analysis is used to:",
+"options":["Reduce variables","Increase noise","Sort data","Encode labels"],
+"answer":"Reduce variables"},
+
+{"q":"Reinforcement learning is based on:",
+"options":["Labels","Rewards","Features","Noise"],
+"answer":"Rewards"},
+
+{"q":"Markov process depends on:",
+"options":["Past states","Future states","Present state","All states"],
+"answer":"Present state"},
+
+{"q":"MCMC stands for:",
+"options":["Markov Chain Monte Carlo","Mean Cluster Monte Carlo","Model Chain Mapping Code","Multi Chain Method Calculation"],
+"answer":"Markov Chain Monte Carlo"},
+
+{"q":"Bayesian Networks are:",
+"options":["Undirected graphs","Directed graphs","Trees","Lists"],
+"answer":"Directed graphs"},
+
 {"q":"K-means belongs to:",
 "options":["Supervised","Reinforcement","Unsupervised","Semi-supervised"],
-"answer":"Unsupervised"}
+"answer":"Unsupervised"},
+
+{"q":"ICA stands for:",
+"options":["Independent Component Analysis","Internal Cluster Analysis","Integrated Component Algorithm","Indexed Cluster Analysis"],
+"answer":"Independent Component Analysis"},
+
+{"q":"Isomap is used for:",
+"options":["Linear mapping","Non-linear dimensionality reduction","Sorting","Encoding"],
+"answer":"Non-linear dimensionality reduction"},
+
+{"q":"Genetic algorithms are inspired by:",
+"options":["Physics","Chemistry","Biology","Mathematics"],
+"answer":"Biology"},
+
+{"q":"Markov Random Fields are:",
+"options":["Directed","Undirected","Linear","Trees"],
+"answer":"Undirected"}
 
 ]
 
@@ -101,8 +148,23 @@ fill_questions = [
 {"q":"K-means algorithm groups data into ______ clusters.","answer":"K"},
 {"q":"Nearest Neighbor depends on ______ distance.","answer":"Euclidean"},
 {"q":"Genetic algorithms use ______ selection.","answer":"Natural"},
+{"q":"Mutation is a genetic ______.","answer":"Operator"},
+{"q":"Factor Analysis identifies ______ variables.","answer":"Latent"},
+{"q":"LLE preserves ______ structure.","answer":"Local"},
+{"q":"HMM has ______ states.","answer":"Hidden"},
+{"q":"Proposal distribution is used in ______ sampling.","answer":"MCMC"},
+{"q":"MRF are ______ graphs.","answer":"Undirected"},
+{"q":"Tracking methods estimate ______ over time.","answer":"States"},
+{"q":"Ensemble learning combines ______ classifiers.","answer":"Multiple"},
 {"q":"GMM is based on ______ distribution.","answer":"Normal"},
-{"q":"PCA finds ______ components.","answer":"Principal"}
+{"q":"PCA finds ______ components.","answer":"Principal"},
+{"q":"LDA maximizes class ______.","answer":"Separation"},
+{"q":"ICA assumes components are ______.","answer":"Independent"},
+{"q":"Isomap preserves ______ distance.","answer":"Geodesic"},
+{"q":"Reinforcement learning uses ______ signals.","answer":"Reward"},
+{"q":"Markov property depends on ______ state.","answer":"Present"},
+{"q":"MCMC is used for ______ sampling.","answer":"Probabilistic"},
+{"q":"Bayesian networks use ______ probability.","answer":"Conditional"}
 
 ]
 
