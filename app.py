@@ -570,12 +570,12 @@ if st.session_state.page == "login":
 
         srn = st.text_input(
             "SRN / Register Number",
-            placeholder="Example: 25AIML001"
+            placeholder="Example: PES2UG25AM221"
         ).strip().upper()
 
         section = st.selectbox(
             "Section",
-            ["A", "B", "C", "D", "E", "F"]
+            ["B", "C", "D"]
         )
 
         declaration = st.checkbox(
