@@ -108,7 +108,7 @@ questions = [
 {"q":"Reinforcement learning is based on:",
 "options":["Labels","Rewards","Features","Noise"],
 "answer":"Rewards"},
-
+  
 {"q":"Markov process depends on:",
 "options":["Past states","Future states","Present state","All states"],
 "answer":"Present state"},
