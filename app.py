@@ -5,10 +5,10 @@ import time
 from datetime import datetime, timezone
 
 # ============================================================
-# BANK-STYLE MEMORY MANAGEMENT ONLINE TEST
+# MEMORY MANAGEMENT ONLINE TEST
 # ============================================================
 
-TEST_TITLE = "Memory Management – Bank Style Online Test"
+TEST_TITLE = "Memory Management Online Test"
 TOTAL_QUESTIONS = 10
 DURATION_MINUTES = 10
 
