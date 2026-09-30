@@ -551,7 +551,7 @@ if st.session_state.page == "login":
 
     st.markdown(
         '<div class="subtitle">'
-        'Bank-Exam Style • 10 Questions • 10 Marks • 10 Minutes'
+        '10 Questions • 10 Marks • 10 Minutes'
         '</div>',
         unsafe_allow_html=True
     )
