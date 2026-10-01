@@ -24,7 +24,7 @@ def get_secret(name, default=""):
 
 SUPABASE_URL = get_secret("SUPABASE_URL")
 SUPABASE_KEY = get_secret("SUPABASE_KEY")
-ADMIN_PASSWORD = get_secret("ADMIN_PASSWORD", "CHANGE_THIS_PASSWORD")
+ADMIN_PASSWORD = get_secret("ADMIN_PASSWORD", "SELVAKUMAR@1983")
 
 try:
     from supabase import create_client
