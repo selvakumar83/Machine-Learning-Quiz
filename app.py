@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 
 TEST_TITLE = "Memory Management Online Test"
 TOTAL_QUESTIONS = 10
-DURATION_MINUTES = 10
+DURATION_MINUTES = 05
 
 # ============================================================
 # SUPABASE / ADMIN SETTINGS
