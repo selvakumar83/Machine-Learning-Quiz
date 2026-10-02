@@ -381,6 +381,7 @@ st.markdown("""
     padding:20px;
     margin-bottom:12px;
     background:#ffffff;
+color:#222222 !important;
 }
 
 .palette-title {
